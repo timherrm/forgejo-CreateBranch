@@ -1,5 +1,8 @@
 name: "Forgejo-CreateBranch"
 description: "A Github Action to create a branch on you forgejo instance via API."
+branding:
+  icon: 'terminal'
+  color: 'purple'
 
 inputs:
   api_url:
