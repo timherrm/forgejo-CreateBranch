@@ -1,4 +1,4 @@
-name: forgejo-EditIssue-Test
+name: forgejo-CreateBranch-Test
 
 on:
   workflow_dispatch:
