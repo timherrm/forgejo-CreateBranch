@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1",
+    "@vercel/ncc": "^0.38.3",
+    "axios": "^1.11.0"
+  },
+  "name": "forgejo-createbranch",
+  "version": "1.0.0",
+  "description": "A Github Action to create a branch on you forgejo instance via API.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timherrm/forgejo-CreateBranch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/timherrm/forgejo-CreateBranch/issues"
+  },
+  "homepage": "https://github.com/timherrm/forgejo-CreateBranch#readme"
+}

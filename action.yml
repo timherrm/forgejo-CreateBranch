@@ -1,0 +1,30 @@
+name: "Forgejo-CreateBranch"
+description: "A Github Action to create a branch on you forgejo instance via API."
+
+inputs:
+  api_url:
+    description: "The base URL of the Forgejo API."
+    required: true
+  token:
+    description: "The authentication token for accessing the Forgejo API."
+    required: true
+  repository:
+    description: "The repository in the format owner/repo."
+    required: true
+  new_branch_name:
+    description: "The name of the branch to create."
+    required: true
+  old_ref_name:
+    description: "The name of the branch you want to create your branch from."
+    required: false
+  debug:
+    description: "The boolean to enable debug output. Options: true"
+    required: false
+
+outputs:
+  result:
+    description: "The result of the action, including success or error messages."
+    value: "${{ steps.run.outputs.result }}"
+runs:
+  using: "node12"
+  main: "dist/index.js"

@@ -1,0 +1,19 @@
+name: forgejo-EditIssue-Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  forgejo-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Forgejo API Action
+        uses: ./
+        with:
+          api_url: ${{ vars.FORGEJO_API_URL }}
+          token: ${{ secrets.FORGEJO_TOKEN }}
+          repository: "owner/repo"
+          new_branch_name: "test/mynewbranch"
+          old_ref_name: "main"
+          debug: true
