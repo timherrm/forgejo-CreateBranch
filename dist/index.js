@@ -35892,6 +35892,9 @@ async function run() {
             new_branch_name,
             old_ref_name
         );
+        if (debug) {
+            console.log('Final output:', JSON.stringify(result, null, 2));
+        }
         core.setOutput('result', JSON.stringify(result, null, 2));
     } catch (error) {
         core.setFailed(error.message);
